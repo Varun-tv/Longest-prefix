@@ -6,9 +6,10 @@ def min_list(c):
             shortest = c[i]
     return shortest
 
-# finds the common prefix by comparing the strings one by one 
+# finds the common prefix by comparing the strings one by one
 def prefix(input_list):
-  prefix = min_list(input_list)
+  shortest = min_list(input_list)
+  prefix = shortest
   for j in range(0, len(input_list)):
       for i in range(0, len(shortest)):
           if shortest[i] != input_list[j][i]:
@@ -35,7 +36,7 @@ else:
   print("\n")
   in_put = input("Enter the option: ")
   if(in_put=="a"or in_put=="A"):
-    input_list = ["flower","flow","flight"]
+    input_list =  ["light","live","liver"]
   elif(in_put=="b"or in_put=="B"):
     input_list = ["light","racecar","car"]
   print("Input list: ",input_list)
